@@ -49,6 +49,7 @@ def vectorize_and_split(df: pd.DataFrame, max_features=5000):   # Limits top 500
     joblib.dump(vec, os.path.join(PROC_DIR, "tfidf_vectorizer.joblib"))
 
     # 3. Split 80/20 train/validation sets
+    """Split 80/20 so both sets preserve 5% fake & 95% real ratio"""
     n_train = int( 0.8 * X.shape[0])            # Ex: X.shape[0] = 1000 job postings
     X_train, X_val = X[:n_train], X[n_train:]   # TF-IDF features
     y_train = df["fraudulent"][:n_train]         # Binary fraud labels
