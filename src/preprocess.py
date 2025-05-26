@@ -42,7 +42,9 @@ def vectorize_and_split(df: pd.DataFrame, max_features=5000):   # Limits top 500
     os.makedirs(PROC_DIR, exist_ok=True)
 
     # 1. Vectorize description
-    vec = TfidfVectorizer(max_features=max_features)
+    vec = TfidfVectorizer(max_features=max_features,
+                          ngram_range = (1, 2),     # inlcude unigrams + bigrams
+                          stop_words="english")     # sklearn built-in shortcut auto removes "the, and, is, in,..." keep only the informative words and phrases
     X = vec.fit_transform(df["description"])    # Learns the vocab then transforms into numerical features
 
     # 2. Save the trained vertorizer to a file for later use inference/retraining
