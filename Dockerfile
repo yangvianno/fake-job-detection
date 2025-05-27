@@ -17,7 +17,7 @@ COPY requirements-base.txt .
 RUN pip install --no-cache-dir -r requirements-base.txt
 
 # Copy source entire project into the container
-COPY ..
+COPY . .
 
 # Run preprocessing & training (optional entrypoint)
 # You can override at runtime: 'docker run api:latest python src/preprocessing.py && python -m src.train ...'
