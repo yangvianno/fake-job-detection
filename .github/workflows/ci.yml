@@ -14,12 +14,12 @@ jobs:
               with:
                 python-version: 3.9
 
-            - name: Install dependencies
+            - name: Install dev dependencies
               run: |
                 python -m venv venv
                 . venv/bin/activate
-                pip install -r requirements.txt
-                pip install pytest black
+                pip install --upgrade pip
+                pip install -r requirements-dev.txt
 
             - name: Lint with black
               run: |

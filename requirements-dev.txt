@@ -1,0 +1,5 @@
+-r requirement-base.text
+
+# Dev & CI-only tools
+pytest
+black

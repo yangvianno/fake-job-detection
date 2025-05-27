@@ -23,9 +23,10 @@ jobs:
               context: .
               push: True
               tags: ${{ secrets.DOCKERHUB_USER }}/fake-job-detection:latest
+              build-args: |
+                REQUIREMENTS=requirements-base.txt
 
           - name: Deploy (optional)
             run: |
               # e.g. kubectl set image deployment/api api=${{ secrets.DOCKERHUB_USER }}/fake-job-detection:latest
               echo "Add your deployment commands here"
-              
