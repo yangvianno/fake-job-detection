@@ -1,4 +1,4 @@
--r requirement-base.text
+-r requirements-base.text
 
 # Dev & CI-only tools
 pytest
