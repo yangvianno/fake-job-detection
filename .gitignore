@@ -1,10 +1,15 @@
-mkdirP# Byte-compiled / optimized / DLL files
+# Python artifacts
 __pycache__/
 *.py[cod]
-*.so
-
-# Virtual environment
+*.pyo
 venv/
+.env
 
-# VSCode
+# Data & models (too big/binary)
+data/raw/
+data/processed/
+models/production/
+
+# IDE / OS files
 .vscode/
+.DS_Store

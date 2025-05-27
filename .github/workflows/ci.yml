@@ -1,0 +1,32 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+    lint-and-test:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v4
+
+            - name: Set up Python
+              uses: actions/setup-python@v4
+              with:
+                python-version: 3.9
+
+            - name: Install dependencies
+              run: |
+                python -m venv venv
+                . venv/bin/activate
+                pip install -r requirements.txt
+                pip install pytest black
+
+            - name: Lint with black
+              run: |
+                . venv/bin/activate
+                black --check .
+
+            - name: Run tests
+              run: |
+                . venv/bin/activate
+                pytest --maxfail=1 --disable-warnings -q
