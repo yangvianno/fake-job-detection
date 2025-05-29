@@ -1,0 +1,9 @@
+pandas
+scikit-learn
+tensorflow
+mlflow
+imbalanced-learn
+fastapi
+uvicorn[standard]
+pyyaml
+pytest

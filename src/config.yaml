@@ -1,0 +1,21 @@
+paths:
+  raw_csv: data/raw/fake_job_postings.raw_csv
+  processed_dir: data/processed
+  tfidf_path: data/processed/tfidf_vectorizer.joblib
+  train_split: data/processed/train.pkl
+  val_split: data/processed/val.pkl
+
+models:
+  mlp:
+    hidden_units: [64, 32]
+    dropout: 0.5
+  lstm:
+    vocab_size: 10000
+    embed_dim: 128
+    lstm_units: 64
+
+training:
+  batch_size: 32
+  epoch: 5
+  decision_threshold: 0.5
+  min recall: 0.85

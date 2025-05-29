@@ -13,7 +13,7 @@ import numpy as np
 from sklearn.metrics import recall_score, precision_score, roc_auc_score
 from sklearn.utils.class_weight import compute_class_weight # Intergrate to model.fit() so model pays more attention to the fake-job class
 from imblearn.over_sampling import RandomOverSampler
-from src.model import build_model
+from models import build_model
 
 # Define and parse arguments for flexibility between MLP vs LSTM, tune batch size, epochs, dropout, thresholds, etc.
 def parse_args():

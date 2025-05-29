@@ -1,15 +1,14 @@
-# Python artifacts
+# Python
 __pycache__/
 *.py[cod]
-*.pyo
 venv/
-.env
 
-# Data & models (too big/binary)
+# data
 data/raw/
 data/processed/
-models/production/
 
-# IDE / OS files
+# models
+models/
+
+# editor
 .vscode/
-.DS_Store

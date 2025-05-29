@@ -1,5 +1,0 @@
--r requirements-base.txt
-
-# Dev & CI-only tools
-pytest>=7.0
-black>=23.1
