@@ -15,7 +15,8 @@ models:
     lstm_units: 64
 
 training:
+  train_ratio: 0.8
   batch_size: 32
-  epoch: 5
+  epochs: 5
   decision_threshold: 0.5
   min recall: 0.85

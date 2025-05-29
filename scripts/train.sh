@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-echo "🏋️‍♀️ Starting training…"
+echo "🏋️‍♀️ Starting training model..."
 python src/train.py \
   --model_type mlp \
   --batch_size 32 \
