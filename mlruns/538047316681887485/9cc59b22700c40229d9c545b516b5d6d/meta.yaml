@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/alexvo/Desktop/Projects/fake-job-detection/mlruns/538047316681887485/9cc59b22700c40229d9c545b516b5d6d/artifacts
+end_time: 1748657846326
+entry_point_name: ''
+experiment_id: '538047316681887485'
+lifecycle_stage: active
+run_id: 9cc59b22700c40229d9c545b516b5d6d
+run_name: mlp
+run_uuid: 9cc59b22700c40229d9c545b516b5d6d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748657817340
+status: 4
+tags: []
+user_id: alexvo

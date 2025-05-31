@@ -5,7 +5,7 @@ import joblib
 import pandas as pd
 import yaml
 from src.preprocess import preprocess_df
-from src.feature.vectorizer import TfidfVectorizerWrapper
+from src.features.vectorizer import TfidfVectorizerWrapper
 
 def make_dataset(config_path: str = "src/config.yaml"):
     cfg = yaml.safe_load(open(config_path))

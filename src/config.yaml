@@ -1,9 +1,10 @@
 paths:
-  raw_csv: data/raw/fake_job_postings.raw_csv
-  processed_dir: data/processed
-  tfidf_path: data/processed/tfidf_vectorizer.joblib
-  train_split: data/processed/train.pkl
-  val_split: data/processed/val.pkl
+  raw_csv:        data/raw/fake_job_postings.csv
+  processed_dir:  data/processed
+  tfidf_path:     data/processed/tfidf_vectorizer.joblib
+  train_split:    data/processed/train.pkl
+  val_split:      data/processed/val.pkl
+  production_dir: models/production
 
 models:
   mlp:
@@ -15,8 +16,9 @@ models:
     lstm_units: 64
 
 training:
+  model_type: mlp
   train_ratio: 0.8
   batch_size: 32
   epochs: 5
   decision_threshold: 0.5
-  min recall: 0.85
+  min_recall: 0.85
