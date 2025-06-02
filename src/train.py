@@ -1,7 +1,8 @@
 # src/train.py
 
 """
-	•	Loads defaults from config.yaml
+	Train a new  model
+    •	Loads defaults from config.yaml
 	•	Parses CLI flags with those defaults
 	•	Performs data loading, oversampling, class weighting
 	•	Builds & trains your MLP/LSTM via src.models.build_model
